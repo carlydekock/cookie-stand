@@ -9,7 +9,7 @@ var dubaiList = document.getElementById('dubai');
 var parisList = document.getElementById('paris');
 var limaList = document.getElementById('lima');
 
-//1st object - get it to work - Seattle Store
+//1st object - Seattle Store
 var seattleStore = {
   name: 'Seattle',
   min: 23,
@@ -28,10 +28,10 @@ var seattleStore = {
     for (var i = 0; i < hours.length; i++) {
       // console.log(this.getRandomNumber());
       // var calcSales = this.getRandomNumber() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomNumber() * this.avg);
-      // console.log(calcSalesRound);
-      this.hourlySales[i] = calcSalesRound;
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomNumber() * this.avg);
+      // console.log(hourlyTotal);
+      this.hourlySales[i] = hourlyTotal;
+      this.dailyTotal += hourlyTotal;
     }
   },
 
@@ -40,7 +40,7 @@ var seattleStore = {
     this.calculateHourlySales();
     for (var i = 0; i < this.hourlySales.length; i++) {
       //Proof I can get here!
-      console.log('inside render method');
+      // console.log('inside render method');
       //create element
       var liElement = document.createElement('li');
       //give it content
@@ -48,7 +48,12 @@ var seattleStore = {
       //append it to the DOM
       seattleList.appendChild(liElement);
     }
+    // render daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    seattleList.appendChild(liElement);
   }
 };
 
@@ -74,10 +79,10 @@ var tokyoStore = {
     for (var i = 0; i < hours.length; i++) {
       // console.log(this.getRandomNumber());
       // var calcSales = this.getRandomNumber() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomNumber() * this.avg);
-      // console.log(calcSalesRound);
-      this.hourlySales[i] = calcSalesRound;
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomNumber() * this.avg);
+      // console.log(hourlyTotal);
+      this.hourlySales[i] = hourlyTotal;
+      this.dailyTotal += hourlyTotal;
     }
   },
 
@@ -86,7 +91,7 @@ var tokyoStore = {
     this.calculateHourlySales();
     for (var i = 0; i < this.hourlySales.length; i++) {
       //Proof I can get here!
-      console.log('inside render method');
+      // console.log('inside render method');
       //create element
       var liElement = document.createElement('li');
       //give it content
@@ -94,7 +99,12 @@ var tokyoStore = {
       //append it to the DOM
       tokyoList.appendChild(liElement);
     }
+    // render daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    tokyoList.appendChild(liElement);
   }
 };
 
@@ -119,10 +129,10 @@ var dubaiStore = {
     for (var i = 0; i < hours.length; i++) {
       // console.log(this.getRandomNumber());
       // var calcSales = this.getRandomNumber() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomNumber() * this.avg);
-      // console.log(calcSalesRound);
-      this.hourlySales[i] = calcSalesRound;
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomNumber() * this.avg);
+      // console.log(hourlyTotal);
+      this.hourlySales[i] = hourlyTotal;
+      this.dailyTotal += hourlyTotal;
     }
   },
 
@@ -131,7 +141,7 @@ var dubaiStore = {
     this.calculateHourlySales();
     for (var i = 0; i < this.hourlySales.length; i++) {
       //Proof I can get here!
-      console.log('inside render method');
+      // console.log('inside render method');
       //create element
       var liElement = document.createElement('li');
       //give it content
@@ -139,7 +149,12 @@ var dubaiStore = {
       //append it to the DOM
       dubaiList.appendChild(liElement);
     }
+    // render daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    dubaiList.appendChild(liElement);
   }
 };
 
@@ -165,10 +180,10 @@ var parisStore = {
     for (var i = 0; i < hours.length; i++) {
       // console.log(this.getRandomNumber());
       // var calcSales = this.getRandomNumber() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomNumber() * this.avg);
-      // console.log(calcSalesRound);
-      this.hourlySales[i] = calcSalesRound;
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomNumber() * this.avg);
+      // console.log(hourlyTotal);
+      this.hourlySales[i] = hourlyTotal;
+      this.dailyTotal += hourlyTotal;
     }
   },
 
@@ -177,7 +192,7 @@ var parisStore = {
     this.calculateHourlySales();
     for (var i = 0; i < this.hourlySales.length; i++) {
       //Proof I can get here!
-      console.log('inside render method');
+      // console.log('inside render method');
       //create element
       var liElement = document.createElement('li');
       //give it content
@@ -185,7 +200,12 @@ var parisStore = {
       //append it to the DOM
       parisList.appendChild(liElement);
     }
+    // render daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    parisList.appendChild(liElement);
   }
 };
 
@@ -211,10 +231,10 @@ var limaStore = {
     for (var i = 0; i < hours.length; i++) {
       // console.log(this.getRandomNumber());
       // var calcSales = this.getRandomNumber() * this.avg;
-      var calcSalesRound = Math.ceil(this.getRandomNumber() * this.avg);
-      // console.log(calcSalesRound);
-      this.hourlySales[i] = calcSalesRound;
-      this.dailyTotal += calcSalesRound;
+      var hourlyTotal = Math.ceil(this.getRandomNumber() * this.avg);
+      // console.log(hourlyTotal);
+      this.hourlySales[i] = hourlyTotal;
+      this.dailyTotal += hourlyTotal;
     }
   },
 
@@ -223,7 +243,7 @@ var limaStore = {
     this.calculateHourlySales();
     for (var i = 0; i < this.hourlySales.length; i++) {
       //Proof I can get here!
-      console.log('inside render method');
+      // console.log('inside render method');
       //create element
       var liElement = document.createElement('li');
       //give it content
@@ -231,7 +251,12 @@ var limaStore = {
       //append it to the DOM
       limaList.appendChild(liElement);
     }
+    // render daily total
+    liElement = document.createElement('li');
+    // give it content
     liElement.textContent = `Total: ${this.dailyTotal} cookies`;
+    // append it to the DOM
+    limaList.appendChild(liElement);
   }
 };
 
