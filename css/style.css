@@ -1,3 +1,15 @@
 body {
   background-color: lightblue;
 }
+
+tr, td {
+  padding: 15px;
+  border: 1px solid black;
+
+}
+
+th {
+  padding: 15px;
+  border: 1px solid black;
+  font-weight: bold;
+}
