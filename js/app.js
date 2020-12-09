@@ -3,11 +3,11 @@
 
 // global variables
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-var seattleList = document.getElementById('seattle');
-var tokyoList = document.getElementById('tokyo');
-var dubaiList = document.getElementById('dubai');
-var parisList = document.getElementById('paris');
-var limaList = document.getElementById('lima');
+// var seattleList = document.getElementById('seattle');
+// var tokyoList = document.getElementById('tokyo');
+// var dubaiList = document.getElementById('dubai');
+// var parisList = document.getElementById('paris');
+// var limaList = document.getElementById('lima');
 var storeTable = document.getElementById('table');
 var tableHeader = document.getElementById('header');
 var stores = [];
@@ -56,6 +56,22 @@ Store.prototype.render = function () {
   trElement.appendChild(tdElement);
 };
 
+function renderHeader(){
+  var trElement = document.createElement('tr');
+  tableHeader.appendChild(trElement);
+  var thElement = document.createElement('th');
+  thElement.textContent = 'Stores';
+  trElement.appendChild(thElement);
+  for (var i = 0; i < hours.length; i++){
+    thElement = document.createElement('th');
+    thElement.textContent = hours[i];
+    trElement.appendChild(thElement);
+  }
+  //Add Daily Location Total in cell at end of header
+  thElement = document.createElement('th');
+  thElement.textContent = 'Daily Location Total';
+  trElement.appendChild(thElement);
+}
 
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
@@ -70,6 +86,7 @@ function renderAll(){
 }
 
 renderAll();
+renderHeader();
 
 // //1st object - Seattle Store
 // var seattleStore = {
