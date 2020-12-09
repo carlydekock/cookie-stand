@@ -8,6 +8,8 @@ var tokyoList = document.getElementById('tokyo');
 var dubaiList = document.getElementById('dubai');
 var parisList = document.getElementById('paris');
 var limaList = document.getElementById('lima');
+var storeTable = document.getElementById('table');
+var tableHeader = document.getElementById('header');
 var stores = [];
 
 // create constructor function to create store
@@ -35,35 +37,39 @@ Store.prototype.calculateHourlySales = function () {
 
 Store.prototype.render = function () {
   this.calculateHourlySales();
+  //create row and append to the DOM
+  var trElement = document.createElement('tr');
+  storeTable.appendChild(trElement);
+  //create first cell in row, give it name and append to DOM
+  var thElement = document.createElement('th');
+  thElement.textContent = this.name;
+  trElement.appendChild(thElement);
+  //iteratively create, give hourly sales content, and append to the DOM
   for (var i = 0; i < this.hourlySales.length; i++) {
-    //create element
-    var liElement = document.createElement('li');
-    //give it content
-    liElement.textContent = `${hours[i]}: ${this.hourlySales[i]} cookies`;
-    //append it to the DOM
-    seattleList.appendChild(liElement);
+    var tdElement = document.createElement('td');
+    tdElement.textContent = this.hourlySales[i];
+    trElement.appendChild(tdElement);
   }
-  // render daily total
-  liElement = document.createElement('li');
-  // give it content
-  liElement.textContent = `Total: ${this.dailyTotal} cookies`;
-  // append it to the DOM
-  seattleList.appendChild(liElement);
+  // add total to the end of the row
+  tdElement = document.createElement('td');
+  tdElement.textContent = this.dailyTotal;
+  trElement.appendChild(tdElement);
 };
 
-new Store('seattle', 23, 65, 6.3);
-new Store('tokyo', 3, 24, 1.2);
-new Store('dubai', 11, 38, 3.7);
-new Store('paris', 20, 38, 2.3);
-new Store('lima', 2, 16, 4.6);
 
+new Store('Seattle', 23, 65, 6.3);
+new Store('Tokyo', 3, 24, 1.2);
+new Store('Dubai', 11, 38, 3.7);
+new Store('Paris', 20, 38, 2.3);
+new Store('Lima', 2, 16, 4.6);
 
-stores[0].render();
-stores[1].render();
-stores[2].render();
-stores[3].render();
-stores[4].render();
+function renderAll(){
+  for (var i = 0; i < stores.length; i++){
+    stores[i].render();
+  }
+}
 
+renderAll();
 
 // //1st object - Seattle Store
 // var seattleStore = {
