@@ -13,6 +13,9 @@ var tableHeader = document.getElementById('header');
 var tableFooter = document.getElementById('footer');
 var stores = [];
 
+// Step 1 - get usable data out of form, save to variable
+var myForm = document.getElementById('container');
+
 // create constructor function to create store
 function Store(name, min, max, avg) {
   this.name = name;
@@ -97,6 +100,16 @@ function renderFooter(){
   trElement.appendChild(tdElement);
 }
 
+// Step 3: event handler
+function handleSubmit(event){
+  event.preventDefault();
+
+  var storeName = event.target.store.value;
+  console.log(storeName);
+}
+
+
+// Instantiations of stores
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
 new Store('Dubai', 11, 38, 3.7);
@@ -114,3 +127,5 @@ renderHeader();
 renderFooter();
 
 
+// Step 2 - add event listener
+myForm.addEventListener('submit', handleSubmit);
