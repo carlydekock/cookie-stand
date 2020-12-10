@@ -12,6 +12,30 @@
       <a href="index.html">Home Page</a>
     </header>
     <main>
+      <form id="container">
+        <fieldset>
+          <legend>Enter some information.</legend>
+          <!-- First text entry: give store name -->
+          <label>Store Name:
+          <input type="text" name="store">
+          </label>
+          <!-- Second text entry: give whole number for min customers -->
+          <label>Minimum Customers:
+          <input type="text" name="min">
+          </label>
+          <!-- Third text entry: give whole number for max customers -->
+          <label>Maximum Customers:
+          <input type="text" name="max">
+          </label>
+          <!-- Fourth text entry: give number (could be decimal) for average cookie sales -->
+          <br>
+          <label>Average Cookie Sales:
+          <input type="text" name="avg">
+          </label>
+          <!-- Submit button to submit information entered -->
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
       <!-- required content-->
       <table id="table">
         <thead id="header"></thead>
