@@ -90,7 +90,6 @@ function renderFooter(){
     tdElement.textContent = allStoresHourlyTotal;
     trElement.appendChild(tdElement);
     allStoresDailyTotal += allStoresHourlyTotal;
-    console.log(allStoresDailyTotal);
   }
   //Add final grand total in bottom right corner of table
   tdElement = document.createElement('td');
