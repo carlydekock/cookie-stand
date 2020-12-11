@@ -25,6 +25,12 @@ header span {
   margin-left: 100px;
 }
 
+header a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
 nav a {
   text-decoration: none;
   color: white;
@@ -75,6 +81,22 @@ ul#horizontal-images li {
   margin: auto;
 }
 
+#table {
+  border: 3px solid black;
+}
+
+#table td:last-child {
+  background-color: rgb(250, 195, 173);
+}
+
+#footer {
+  background-color: rgb(250, 195, 173);
+}
+
+#table th:first-child {
+  background-color: lightsalmon;
+}
+
 tr, td {
   padding: 15px;
   border: 1px solid black;
@@ -84,6 +106,40 @@ th {
   padding: 15px;
   border: 1px solid black;
   font-weight: bold;
+}
+
+#container {
+  padding: 25px;
+  margin: auto;
+}
+
+fieldset {
+  padding-top: 25px;
+  margin: auto;
+  line-height: 25px;
+}
+
+fieldset label {
+  display: block;
+}
+
+legend {
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+li img {
+  margin: 15px;
+}
+
+#firstsection article {
+  width: 50%;
+  float: right;
+}
+
+#firstsection img {
+  width: 50%;
 }
 
 /* Footer */
