@@ -13,6 +13,9 @@ var tableHeader = document.getElementById('header');
 var tableFooter = document.getElementById('footer');
 var stores = [];
 
+// Step 1 - get usable data out of form, save to variable
+var myForm = document.getElementById('container');
+
 // create constructor function to create store
 function Store(name, min, max, avg) {
   this.name = name;
@@ -73,7 +76,7 @@ function renderHeader(){
   thElement.textContent = 'Daily Location Total';
   trElement.appendChild(thElement);
 }
-//This is the start of trying to get the footer on the table to render with totals
+// This is the start of trying to get the footer on the table to render with totals
 function renderFooter(){
   var trElement = document.createElement('tr');
   tableFooter.appendChild(trElement);
@@ -97,6 +100,44 @@ function renderFooter(){
   trElement.appendChild(tdElement);
 }
 
+// Step 3: event handler
+function handleSubmit(event){
+  event.preventDefault();
+  var storeName = event.target.store.value;
+  console.log(storeName);
+  var customerMin = event.target.min.value;
+  console.log(customerMin);
+  var customerMax = event.target.max.value;
+  console.log(customerMax);
+  var cookieSalesAvg = event.target.avg.value;
+  console.log(cookieSalesAvg);
+  var newStore = new Store(storeName, customerMin, customerMax, cookieSalesAvg);
+  newStore.render();
+  //Need to clear current footer, and update with new information
+  document.getElementById('footer').innerHTML = '';
+  var trElement = document.createElement('tr');
+  tableFooter.appendChild(trElement);
+  var thElement = document.createElement('th');
+  thElement.textContent = 'Totals';
+  trElement.appendChild(thElement);
+  var allStoresDailyTotal = 0;
+  for (var i = 0; i < hours.length; i++) {
+    var allStoresHourlyTotal = 0;
+    for (var j = 0; j < stores.length; j++) {
+      allStoresHourlyTotal += stores[j].hourlySales[i];
+    }
+    var tdElement = document.createElement('td');
+    tdElement.textContent = allStoresHourlyTotal;
+    trElement.appendChild(tdElement);
+    allStoresDailyTotal += allStoresHourlyTotal;
+  }
+  //Add final grand total in bottom right corner of table
+  tdElement = document.createElement('td');
+  tdElement.textContent = allStoresDailyTotal;
+  trElement.appendChild(tdElement);
+}
+
+// Instantiations of stores
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
 new Store('Dubai', 11, 38, 3.7);
@@ -114,3 +155,5 @@ renderHeader();
 renderFooter();
 
 
+// Step 2 - add event listener
+myForm.addEventListener('submit', handleSubmit);
