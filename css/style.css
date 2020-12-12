@@ -2,7 +2,7 @@
 
 body {
   background-color: lightsalmon;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -11,7 +11,7 @@ body {
 header {
   background-color: #444;
   height: 100px;
-  border: 5px solid white;
+  border: 3px solid white;
 }
 
 header nav {
@@ -48,12 +48,15 @@ h1 {
   font-size: 60px;
   font-weight: bold;
   padding: 10px;
+  font-family: 'Roboto Slab', serif;
+  color: rgb(116, 74, 59);
 }
 
 #locationshours {
   background-color: rgb(252, 202, 182);
   text-align: center;
   padding: 10px; 
+  font-size: 18px;
 }
 
 main div h2 {
@@ -100,6 +103,8 @@ ul#horizontal-images li {
 tr, td {
   padding: 15px;
   border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(1, 1, 88)
 }
 
 th {
@@ -134,12 +139,69 @@ li img {
 }
 
 #firstsection article {
-  width: 50%;
+  width: 47%;
   float: right;
+  padding-left: 10px;
+  line-height: 20px;
+}
+
+#firstsection article cite {
+  font-style: italic;
+}
+
+#firstsection article h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 #firstsection img {
   width: 50%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#largesalmon {
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 85px;
+  padding-bottom: 25px;
+}
+
+#secondsection {
+  background-color: rgb(252, 202, 182);
+  padding-bottom: 10px;
+}
+
+#fishposter {
+  width: 50%;
+  padding-left: 225px;
+}
+
+#posterblurb {
+  text-align: center;
+  font-size: 18px;
+}
+
+#fishshirt {
+  width: 50%;
+  padding-top: 30px;
+  padding-left: 225px;
+}
+
+#shirtblurb {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+#secondsection h2 {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 /* Footer */
@@ -149,9 +211,10 @@ footer {
   height: 75px;
   text-align: center;
   margin: auto;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 footer nav {
   vertical-align: center;
+  color: rgb(163, 162, 162);
 }
