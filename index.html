@@ -4,6 +4,9 @@
     <title>Pat's Salmon Cookies</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Custom Google font for h1 heading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -17,7 +20,7 @@
     </header>
     <main>
       <h1> Pat's Salmon Cookies</h1>
-      <img class="largesalmon" src="img/salmon.png" alt="Large colorful salmon">
+      <img id="largesalmon" src="img/salmon.png" alt="Large colorful salmon">
       <!-- <h2>Locations and Hours</h2> -->
       <p>
         <div id="locationshours">
@@ -57,23 +60,28 @@
           <h2>Reviews</h2>
           <p>People all over the world just love our salmon cookies...Take a look below to read what folks have to say:
             <br>
-            <q>Very creative! -A Seattle customer</q><br>
-            <q>Really tasty! -A Tokyo customer</q><br>
-            <q>Interesting for sure, I'll definitely be back. - A Seattle customer</q><br>
+            <br>
+            <q>Very creative! <cite>-A Seattle customer</cite></q><br>
+            <q>Really tasty! <cite>-A Tokyo customer</cite></q><br>
+            <q>Interesting for sure, I'll definitely be back. <cite>- A Seattle customer</cite></q><br>
+            <q>I'm going to get them for my whole family! <cite>- A Lima customer</cite></q><br>
+            <q>I can't believe I haven't tried these before, they are great. <cite>- A Dubai customer</cite></q><br>
+            <q>My new favorite cookie! <cite>- A Paris customer</cite></q><br>
           </p>
         </article>
       </section>
 
       <section id="secondsection">
+        <h2>Merchandise available now!</h2>
         <ul>
-          <li><img src="img/chinook.jpg" alt="Colorful chinook salmon"></li>
-          <li><img src="img/shirt.jpg" alt="Two salmon pictured on a gray tshirt"></li>
+          <li><img id="fishposter" src="img/chinook.jpg" alt="Colorful chinook salmon"></li>
+          <article id="posterblurb">Colorful fish posters available now for $10. Contact us today to reserve yours!</article>
+          <li><img id="fishshirt" src="img/shirt.jpg" alt="Two salmon pictured on a gray tshirt"></li>
+          <article id="shirtblurb">Comfortable gray tshirt with two colorful salmon pictured. A customer favorite! $15</article>
         </ul>
-
       </section>
-      <p>
-        <h3>Thanks for visiting our page!</h3>
-      </p>
+      <br>
+      <br>
     </main>
     <footer>
       <nav>
